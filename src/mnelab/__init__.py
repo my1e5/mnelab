@@ -29,6 +29,7 @@ def main():
         bundle = NSBundle.mainBundle()
         info = bundle.localizedInfoDictionary() or bundle.infoDictionary()
         info["CFBundleName"] = app_name
+        info["CFBundleDisplayName"] = app_name
 
     matplotlib.use("QtAgg")
     app = QApplication(sys.argv)
